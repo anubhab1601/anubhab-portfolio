@@ -26,8 +26,53 @@
 .about-me p {
   font-size: 33px;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
+  line-height: 48px;
+  letter-spacing: 0.5px;
+  color: #d1d5db;
+}
+
+.about-me p .highlight {
+  color: var(--accentColor);
+  font-weight: 700;
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat {
+  padding: 20px 30px;
+  background: rgba(20, 184, 166, 0.05);
+  border: 1px solid rgba(20, 184, 166, 0.15);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  background: rgba(20, 184, 166, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(20, 184, 166, 0.3);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.stat h4 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #14b8a6;
+  font-weight: 800;
+  font-family: inherit;
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+.stat span {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #aaa;
 }
 
 @media only screen and (min-width: 600px) {
@@ -59,8 +104,9 @@
     width: 50%;
   }
   .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
+    font-size: 2vw;
+    line-height: 2.8vw;
+    color: #d1d5db;
   }
 }
 @media only screen and (min-width: 1950px) {

@@ -8,7 +8,7 @@ import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
-import setSplitText from "./utils/splitText";
+import setSplitText, { registerSplitTextRefresh } from "./utils/splitText";
 
 const TechStack = lazy(() => import("./TechStack"));
 
@@ -23,6 +23,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       setIsDesktopView(window.innerWidth > 1024);
     };
     resizeHandler();
+    registerSplitTextRefresh();
     window.addEventListener("resize", resizeHandler);
     return () => {
       window.removeEventListener("resize", resizeHandler);

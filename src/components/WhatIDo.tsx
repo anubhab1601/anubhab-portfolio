@@ -8,7 +8,7 @@ const WhatIDo = () => {
     containerRef.current[index] = el;
   };
   useEffect(() => {
-    if (ScrollTrigger.isTouch) {
+    if (ScrollTrigger.isTouch === 1) {
       containerRef.current.forEach((container) => {
         if (container) {
           container.classList.remove("what-noTouch");
@@ -142,6 +142,82 @@ const WhatIDo = () => {
                 <div className="what-tags">REST APIs</div>
                 <div className="what-tags">Microservices</div>
                 <div className="what-tags">Python</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>AI/ML</h3>
+              <h4>Generative AI & LLMs</h4>
+              <p>
+                Building intelligent systems with LLMs, RAG pipelines, and NLP. From AI agents to prompt engineering, I create autonomous AI-powered solutions.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">LLMs</div>
+                <div className="what-tags">RAG Pipelines</div>
+                <div className="what-tags">LangChain</div>
+                <div className="what-tags">NLP</div>
+                <div className="what-tags">TensorFlow</div>
+                <div className="what-tags">PyTorch</div>
+                <div className="what-tags">HuggingFace</div>
+                <div className="what-tags">OpenAI</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 3)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>DATA SCIENCE</h3>
+              <h4>Model Training & Optimization</h4>
+              <p>
+                End-to-end data pipelines from EDA to model deployment. Building scalable systems with hyperparameter tuning, ensemble methods, and production-ready ML models.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">NumPy</div>
+                <div className="what-tags">Pandas</div>
+                <div className="what-tags">Scikit-Learn</div>
+                <div className="what-tags">XGBoost</div>
+                <div className="what-tags">Matplotlib</div>
+                <div className="what-tags">Seaborn</div>
+                <div className="what-tags">Power BI</div>
+                <div className="what-tags">Data Pipelines</div>
               </div>
               <div className="what-arrow"></div>
             </div>

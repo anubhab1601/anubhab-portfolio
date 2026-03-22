@@ -32,7 +32,7 @@ export default function setSplitText() {
     });
 
     para.anim = gsap.fromTo(
-      para.split.words,
+      para.split!.words,
       { autoAlpha: 0, y: 80 },
       {
         autoAlpha: 1,
@@ -58,7 +58,7 @@ export default function setSplitText() {
       linesClass: "split-line",
     });
     title.anim = gsap.fromTo(
-      title.split.chars,
+      title.split!.chars,
       { autoAlpha: 0, y: 80, rotate: 10 },
       {
         autoAlpha: 1,
@@ -76,5 +76,13 @@ export default function setSplitText() {
     );
   });
 
+}
+
+// Register the refresh listener only once. Calling setSplitText() again on
+// every "refresh" event would re-add another listener, causing infinite recursion.
+let _splitTextListenerRegistered = false;
+export function registerSplitTextRefresh() {
+  if (_splitTextListenerRegistered) return;
+  _splitTextListenerRegistered = true;
   ScrollTrigger.addEventListener("refresh", () => setSplitText());
 }
